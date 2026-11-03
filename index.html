@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coverall</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+	body{margin:0;font-family:'Inter',system-ui,sans-serif;color:#003B41;background:#F9F9F9;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss03"}
+	a{color:inherit}
+	h1,h2,h3,p{margin:0}
+	h1,h2,h3{font-family:'Instrument Sans','Inter',system-ui,sans-serif;font-weight:600;text-wrap:balance}
+	.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px);box-sizing:border-box}
+	.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:0;border-radius:999px;background:transparent;font-size:13px;line-height:1;font-weight:600;color:#003B41}
+	.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:#00AC49}
+	.eyebrow{align-self:flex-start}
+	.dk .mark{color:#68F1AD}
+	.dk .eyebrow{color:#D6EDE2}
+	.dk .eyebrow:before{background:#68F1AD}
+	.mark{color:#00873A}
+	.chip{position:absolute;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:#FFFFFF;font-size:14px;font-weight:600;color:#003B41;box-shadow:0 14px 28px -12px rgba(0,59,65,.45)}
+	.chip i{width:9px;height:9px;border-radius:50%}
+	.h2{font-size:clamp(34px,4vw,54px);line-height:1.04;letter-spacing:-0.04em}
+	.soft{color:#8AA5A8}
+	.muted{color:#316065}
+	.nav-link{text-decoration:none;font-weight:500;font-size:14px;color:#316065;padding:8px 2px;transition:color .15s}
+	.nav-link:hover{color:#003B41}
+	.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 28px;border-radius:15px;font-weight:500;font-size:15px;text-decoration:none;box-sizing:border-box;transition:background .2s,color .2s,box-shadow .2s,transform .2s}
+	.btn:hover{transform:translateY(-1px)}
+	.btn-dark{background:#003B41;color:#FFFFFF}
+	.btn-dark:hover{background:#0B4F56}
+	.btn:active{transform:translateY(1px)}
+	.btn-line{color:#003B41;background:#FFFFFF;box-shadow:0 8px 20px -10px rgba(0,59,65,.35)}
+	.btn-line:hover{background:#F1FCF6}
+	.btn-light{background:#FFFFFF;color:#003B41}
+	.btn-light:hover{background:#E5FAEF}
+	.btn-wline{color:#FFFFFF;background:rgba(255,255,255,.1)}
+	.btn-wline:hover{background:rgba(255,255,255,.18)}
+	a:focus-visible,.btn:focus-visible{outline:2px solid #00AC49;outline-offset:3px}
+	.rule{border-top:1px solid #E6E6E6}
+	.ico{color:#003B41;width:52px;height:52px;border-radius:18px;background:#E5FAEF;display:grid;place-items:center}
+	.tag{display:inline-flex;height:38px;align-items:center;padding:0 18px;border-radius:999px;font-size:14px;font-weight:500;color:#003B41;background:#E5FAEF}
+	.fade{-webkit-mask-image:linear-gradient(#000 62%,transparent 100%);mask-image:linear-gradient(#000 62%,transparent 100%)}
+	.step{display:flex;flex-direction:column;gap:28px;padding:0 clamp(16px,2.4vw,36px);border-left:1px solid #E6E6E6}
+	.step:first-child{border-left:0;padding-left:0}
+	.num{font-family:'Instrument Sans',sans-serif;font-weight:500;font-size:96px;line-height:.9;letter-spacing:-0.04em;color:transparent;-webkit-text-stroke:1px #B9D8CA}
+	.iph{position:relative;box-sizing:border-box;padding:2.9%;border-radius:15.6% / 7.1%;background:linear-gradient(160deg,#9aa0a3 0%,#4a5053 9%,#1d2123 30%,#0f1213 55%,#2c3134 85%,#7d8386 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),inset 0 0 0 2px rgba(0,0,0,.55),0 2px 4px rgba(0,30,35,.18),0 50px 80px -30px rgba(0,40,45,.5)}
+	.iph:before{content:"";position:absolute;inset:.9%;border-radius:14.8% / 6.7%;background:#000;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+	.iph-s{position:relative;border-radius:13.3% / 6.4%;overflow:hidden;background:#F2F2F2}
+	.iph-s img{display:block;width:100%;height:auto}
+	.iph-s:after{content:"";position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 28%,rgba(255,255,255,0) 72%,rgba(255,255,255,.05) 100%);pointer-events:none}
+	.iph i{position:absolute;width:1.3%;background:linear-gradient(90deg,#1a1e20,#8b9295 55%,#3b4143);border-radius:1px}
+	.iph .l1{left:-0.9%;top:14.5%;height:2.6%}.iph .l2{left:-0.9%;top:20%;height:5.2%}.iph .l3{left:-0.9%;top:26.6%;height:5.2%}.iph .r1{right:-0.9%;top:23%;height:8.6%;transform:scaleX(-1)}
+	.dk{color:#FFFFFF}
+	.dk h2,.dk h3{color:#FFFFFF}
+	.dk .muted{color:#A9C3C6}
+	.dk .soft{color:#6F9CA0}
+	.dk .eyebrow{color:#A9C3C6}
+	.dk .rule{border-top-color:rgba(255,255,255,.12)}
+	.dk .step{border-left-color:rgba(255,255,255,.12)}
+	.dk .num{-webkit-text-stroke:1px rgba(104,241,173,.5)}
+	.dk .ico{color:#68F1AD;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+	.iph-s img.bl{position:absolute;inset:0;width:100%;height:100%;filter:blur(10px) saturate(.9);transform:scale(1.07);-webkit-mask-image:linear-gradient(transparent 36%,#000 60%);mask-image:linear-gradient(transparent 36%,#000 60%)}
+	@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+	.ctr{align-items:center!important;text-align:center}
+	.ctr .eyebrow{align-self:center}
+	:root{--s:clamp(72px,9vw,120px);--g:clamp(36px,5vw,64px)}
+	.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+	@media (max-width:900px){.ft{flex-direction:column;justify-content:center!important;text-align:center;gap:14px!important;padding-top:36px!important;padding-bottom:32px!important}.ft>span{justify-content:center}}
+	@media (max-width:400px){.sep{display:none}.fm{display:block}}
+	@media (max-width:820px){.sg-w{padding-top:48px!important;padding-bottom:40px!important;gap:28px!important}.sg-c{padding:16px 18px!important}.sg-c>div{flex-direction:row!important;text-align:left!important;gap:14px!important;align-items:center!important}.sg-c .ico{width:44px;height:44px;flex:none}.sg-c p{margin-top:2px!important;font-size:14px!important}.sg-c h3{font-size:17px!important}.phimg{aspect-ratio:5/4!important;object-position:58% 40%!important}.plwrap{height:min(400px,86vw)!important}.hstage{height:330px!important}.hb1{width:46vw!important}.hb2{width:35vw!important;margin-top:56px!important;margin-left:-12px!important;margin-right:-12px!important}.nav-links{display:none!important}.chip{display:none}.step{border-left:0;padding:0}}
+	@media (prefers-reduced-motion:reduce){.rise{animation:none}}
+</style>
+
+</head>
+<body>
+
+
+<div style="min-height:100%;background:#F9F9F9">
+
+	<!-- NAV -->
+	<header style="position:sticky;top:0;z-index:20;background:rgba(249,249,249,.78);backdrop-filter:saturate(1.5) blur(16px);-webkit-backdrop-filter:saturate(1.5) blur(16px);border-bottom:1px solid rgba(0,59,65,.07)">
+		<div class="wrap" style="height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+			<a href="#top" aria-label="Coverall" style="display:block"><svg viewBox="0 0 200 31" width="132" height="20.5" fill="none" role="img" aria-label="Coverall" style="display:block"><path d="M30.6581 0C47.5901 2.01912e-07 61.3162 13.7261 61.3162 30.6581H40.4129C40.4129 25.2706 36.0456 20.9032 30.6581 20.9032C25.2706 20.9032 20.9032 25.2706 20.9032 30.6581H0C2.01912e-07 13.7261 13.7261 -4.30297e-09 30.6581 0Z" fill="#67F0AC"/><path d="M81.9475 30.6558C80.108 30.6558 78.41 30.3374 76.8536 29.7007C75.2971 29.0404 73.941 28.1206 72.7855 26.9415C71.6535 25.7623 70.7691 24.3709 70.1324 22.7672C69.4956 21.14 69.1772 19.3713 69.1772 17.461C69.1772 15.5508 69.4838 13.8057 70.097 12.2256C70.7337 10.6455 71.6181 9.27769 72.7501 8.12211C73.9057 6.94295 75.2617 6.04679 76.8182 5.43363C78.3747 4.79689 80.0845 4.47852 81.9475 4.47852C84.0464 4.47852 85.9331 4.89122 87.6075 5.71663C89.3055 6.51846 90.6851 7.66224 91.7463 9.14798C92.8311 10.6101 93.4915 12.3317 93.7273 14.3127H88.4211C88.1145 12.4968 87.3716 11.129 86.1925 10.2092C85.0133 9.26589 83.6101 8.79423 81.9829 8.79423C80.5443 8.79423 79.2708 9.13619 78.1624 9.8201C77.0776 10.504 76.2286 11.4945 75.6154 12.7916C75.0023 14.0651 74.6957 15.6098 74.6957 17.4257C74.6957 19.2652 75.0023 20.857 75.6154 22.2013C76.2522 23.5219 77.1248 24.5478 78.2332 25.2789C79.3416 25.9863 80.6151 26.3401 82.0536 26.3401C83.5866 26.3401 84.9426 25.8802 86.1217 24.9605C87.3009 24.0407 88.0673 22.6729 88.4211 20.857H93.7981C93.4915 22.838 92.7958 24.5714 91.7109 26.0571C90.6261 27.5193 89.2465 28.6512 87.5721 29.4531C85.8977 30.2549 84.0228 30.6558 81.9475 30.6558Z" fill="#003B41"/><path d="M104.554 30.6558C102.573 30.6558 100.827 30.2667 99.3182 29.4884C97.8324 28.6866 96.6651 27.5782 95.8161 26.1632C94.9907 24.7246 94.578 23.0738 94.578 21.2108C94.578 19.3477 94.9907 17.7205 95.8161 16.329C96.6651 14.9376 97.8324 13.8528 99.3182 13.0746C100.827 12.2963 102.573 11.9072 104.554 11.9072C106.558 11.9072 108.303 12.2963 109.789 13.0746C111.298 13.8528 112.466 14.9376 113.291 16.329C114.117 17.7205 114.529 19.3477 114.529 21.2108C114.529 23.0738 114.105 24.7246 113.256 26.1632C112.43 27.5782 111.263 28.6866 109.754 29.4884C108.268 30.2667 106.535 30.6558 104.554 30.6558ZM104.554 26.4816C105.379 26.4816 106.122 26.2693 106.782 25.8448C107.466 25.4204 108.009 24.819 108.409 24.0407C108.81 23.2389 109.011 22.2838 109.011 21.1754C109.011 19.5481 108.575 18.2982 107.702 17.4257C106.853 16.5295 105.804 16.0814 104.554 16.0814C103.304 16.0814 102.242 16.5295 101.37 17.4257C100.521 18.3218 100.096 19.5717 100.096 21.1754C100.096 22.2838 100.297 23.2389 100.698 24.0407C101.099 24.819 101.629 25.4204 102.29 25.8448C102.974 26.2693 103.728 26.4816 104.554 26.4816Z" fill="#003B41"/><path d="M120.999 30.3021L113.889 12.261H119.584L125.138 29.0993H122.166L127.685 12.261H133.239L126.128 30.3021H120.999Z" fill="#003B41"/><path d="M142.519 30.6558C140.514 30.6558 138.769 30.2667 137.284 29.4884C135.798 28.6866 134.642 27.5782 133.817 26.1632C133.015 24.7482 132.614 23.121 132.614 21.2815C132.614 19.4184 133.015 17.7912 133.817 16.3998C134.642 14.9848 135.786 13.8882 137.248 13.1099C138.71 12.3081 140.408 11.9072 142.342 11.9072C144.205 11.9072 145.821 12.2845 147.188 13.0392C148.556 13.7939 149.618 14.8433 150.372 16.1875C151.127 17.5318 151.504 19.1119 151.504 20.9278C151.504 21.3051 151.492 21.6588 151.469 21.989C151.445 22.2956 151.41 22.5904 151.363 22.8734H135.727V19.3713H147.082L146.163 20.008C146.163 18.5459 145.809 17.4728 145.101 16.7889C144.417 16.0814 143.474 15.7277 142.271 15.7277C140.88 15.7277 139.795 16.1993 139.017 17.1427C138.262 18.086 137.885 19.501 137.885 21.3876C137.885 23.2271 138.262 24.5949 139.017 25.4911C139.795 26.3873 140.951 26.8353 142.484 26.8353C143.333 26.8353 144.064 26.6938 144.677 26.4108C145.29 26.1278 145.75 25.668 146.056 25.0312H151.044C150.455 26.7764 149.441 28.156 148.002 29.1701C146.587 30.1606 144.759 30.6558 142.519 30.6558Z" fill="#003B41"/><path d="M153.634 30.3021V12.261H158.834V16.5059H158.941V30.3021H153.634ZM158.941 20.8924L158.481 16.612C158.905 15.0791 159.601 13.9118 160.568 13.1099C161.535 12.3081 162.737 11.9072 164.176 11.9072C164.624 11.9072 164.954 11.9544 165.167 12.0487V17.0012C165.049 16.954 164.884 16.9304 164.671 16.9304C164.459 16.9068 164.2 16.895 163.893 16.895C162.195 16.895 160.945 17.2016 160.143 17.8148C159.342 18.4044 158.941 19.4302 158.941 20.8924Z" fill="#003B41"/><path d="M177.72 30.3021C177.579 29.7832 177.473 29.229 177.402 28.6395C177.355 28.0499 177.331 27.366 177.331 26.5877H177.19V18.0624C177.19 17.3313 176.942 16.7653 176.447 16.3644C175.975 15.9399 175.268 15.7277 174.324 15.7277C173.428 15.7277 172.709 15.881 172.167 16.1875C171.648 16.4941 171.306 16.9422 171.141 17.5318H166.082C166.318 15.9046 167.155 14.5603 168.594 13.4991C170.032 12.4378 172.002 11.9072 174.501 11.9072C177.095 11.9072 179.076 12.485 180.444 13.6406C181.812 14.7961 182.496 16.4588 182.496 18.6284V26.5877C182.496 27.1773 182.531 27.7787 182.602 28.3918C182.696 28.9814 182.838 29.6182 183.027 30.3021H177.72ZM171.424 30.6558C169.631 30.6558 168.205 30.2077 167.143 29.3116C166.082 28.3918 165.552 27.1773 165.552 25.668C165.552 23.9936 166.176 22.6493 167.426 21.6353C168.7 20.5976 170.469 19.9255 172.733 19.6189L178.003 18.876V21.9536L173.617 22.6257C172.674 22.7672 171.978 23.0267 171.53 23.404C171.082 23.7813 170.858 24.3002 170.858 24.9605C170.858 25.5501 171.07 25.9981 171.494 26.3047C171.919 26.6113 172.485 26.7646 173.192 26.7646C174.301 26.7646 175.244 26.4698 176.022 25.8802C176.801 25.2671 177.19 24.5596 177.19 23.7577L177.685 26.5877C177.166 27.932 176.376 28.946 175.315 29.6299C174.254 30.3139 172.957 30.6558 171.424 30.6558Z" fill="#003B41"/><path d="M185.867 30.3021V4.83226H191.173V30.3021H185.867Z" fill="#003B41"/><path d="M194.694 30.3021V4.83226H200V30.3021H194.694Z" fill="#003B41"/></svg></a>
+			<nav class="nav-links" style="display:flex;align-items:center;gap:36px" aria-label="Pagrindinė navigacija">
+				<a class="nav-link" href="#asmenims">Asmenims</a>
+				<a class="nav-link" href="#imonems">Įmonėms</a>
+				<a class="nav-link" href="#saugumas">Saugumas</a>
+			</nav>
+			<a class="btn btn-dark" href="mailto:info@coverall.com" style="height:42px;padding:0 20px;font-size:14px">Parašykite mums</a>
+		</div>
+	</header>
+
+	<!-- HERO -->
+	<section id="top" style="position:relative;overflow:hidden">
+		<div style="position:absolute;inset:0;background:radial-gradient(60% 55% at 50% 78%,#DDF7EA 0%,rgba(229,250,239,0) 100%)" aria-hidden="true"></div>
+		<div class="wrap" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;padding-top:clamp(48px,7vw,88px)">
+			<p class="eyebrow rise" style="align-self:center">Virtualaus brokerio sistema</p>
+			<h1 class="rise" style="animation-delay:.08s;font-size:clamp(38px,5vw,64px);line-height:1.1;letter-spacing:-0.04em;max-width:12em;text-wrap:balance;margin-top:4px">Draudimai <span class="mark">be chaoso.</span></h1>
+			<p class="muted rise" style="animation-delay:.16s;font-size:19px;line-height:1.55;max-width:30em">Visi jūsų draudimai – vienoje programėlėje. Darbuotojų draudimas – vienoje platformoje.</p>
+			<div class="rise" style="animation-delay:.24s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:12px">
+				<a class="btn btn-dark" href="#asmenims">Išbandykite programėlę</a>
+				<a class="btn btn-line" href="#imonems">Platforma įmonėms</a>
+			</div>
+		</div>
+		<div class="rise hstage" style="animation-delay:.32s;position:relative;height:440px;margin-top:clamp(36px,5vw,56px);overflow:hidden">
+			<div class="fade" style="position:absolute;inset:0;display:flex;justify-content:center;align-items:flex-start">
+				<div class="hb2" style="width:min(236px,26vw);margin-top:96px;margin-right:-34px;position:relative;z-index:1;flex:none"><div class="iph" style=""><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="r1"></i><div class="iph-s"><img src="images/welcome.png" alt="Coverall pasveikinimo ekranas"><img class="bl" src="images/welcome.png" alt=""></div></div></div>
+				<div class="hb1" style="width:min(286px,32vw);margin-top:16px;position:relative;z-index:3;flex:none"><div class="iph" style=""><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="r1"></i><div class="iph-s"><img src="images/home.png" alt="Coverall programėlė: jūsų draudimo apžvalga"><img class="bl" src="images/home.png" alt=""></div></div></div>
+				<div class="hb2" style="width:min(236px,26vw);margin-top:96px;margin-left:-34px;position:relative;z-index:1;flex:none"><div class="iph" style=""><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="r1"></i><div class="iph-s"><img src="images/request.png" alt="Pasirinkite, ką norite apdrausti"><img class="bl" src="images/request.png" alt=""></div></div></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- LOGIN STRIP -->
+	<div class="dk" style="background:#003B41">
+		<div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px 40px;align-items:center;justify-content:space-between;padding-top:24px;padding-bottom:24px;font-size:14px">
+			<span class="muted">Saugus prisijungimas</span>
+			<span style="font-weight:500;color:#FFFFFF">Smart-ID &nbsp;·&nbsp; Mobile-ID &nbsp;·&nbsp; Swedbank &nbsp;·&nbsp; SEB &nbsp;·&nbsp; Luminor</span>
+		</div>
+	</div>
+
+	<!-- ASMENIMS -->
+	<section id="asmenims" style="scroll-margin-top:72px">
+		<div class="wrap" style="padding-top:var(--s);padding-bottom:var(--s);display:flex;flex-direction:column;gap:var(--g)">
+			<div class="ctr" style="display:flex;flex-direction:column;gap:20px">
+				<p class="eyebrow">Asmenims</p>
+				<h2 class="h2" style="max-width:12em">Visi draudimai <span class="mark">vienoje vietoje</span></h2>
+			</div>
+			<div style="position:relative">
+				<img class="phimg" src="images/photo2.jpg" alt="Moteris naudojasi Coverall programėle telefone" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:58% 40%;border-radius:32px;box-shadow:0 50px 90px -50px rgba(0,59,65,.5)">
+				<div style="position:relative;z-index:2;margin:-56px clamp(12px,3vw,40px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px">
+					<div style="background:#FFFFFF;border-radius:24px;padding:28px;box-shadow:0 30px 60px -30px rgba(0,59,65,.35),0 0 0 1px #E6E6E6"><div style="display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></div><div><h3 style="font-size:20px;letter-spacing:-0.015em;line-height:1.25">Matote, kuo esate apdrausti</h3><p class="muted" style="font-size:16px;line-height:1.55;margin-top:8px">Visi polisai ir galiojimo datos – ne el. laiškų krūvoje, o vienoje programėlėje.</p></div></div></div>
+					<div style="background:#FFFFFF;border-radius:24px;padding:28px;box-shadow:0 30px 60px -30px rgba(0,59,65,.35),0 0 0 1px #E6E6E6"><div style="display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m12 8 4 4-4 4"/><path d="M8 12h8"/></svg></div><div><h3 style="font-size:20px;letter-spacing:-0.015em;line-height:1.25">Užklausa be popierizmo</h3><p class="muted" style="font-size:16px;line-height:1.55;margin-top:8px">Tiesiog pasirinkite draudimą ir pateikite duomenis. Užtruksite vos minutę.</p></div></div></div>
+					<div style="background:#FFFFFF;border-radius:24px;padding:28px;box-shadow:0 30px 60px -30px rgba(0,59,65,.35),0 0 0 1px #E6E6E6"><div style="display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div><div><h3 style="font-size:20px;letter-spacing:-0.015em;line-height:1.25">Priminsime prieš pasibaigiant</h3><p class="muted" style="font-size:16px;line-height:1.55;margin-top:8px">Gausite pranešimą dar prieš baigiantis draudimui.</p></div></div></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- IMONEMS -->
+	<section id="imonems" style="scroll-margin-top:72px;position:relative;overflow:hidden">
+		<div class="wrap" style="padding-top:var(--s);padding-bottom:var(--s);display:flex;flex-direction:column;gap:var(--g)">
+			<div class="ctr" style="display:flex;flex-direction:column;align-items:center;gap:20px">
+				<p class="eyebrow">Įmonėms</p>
+				<h2 class="h2" style="max-width:12em">Darbuotojų draudimas&nbsp;–<br><span class="mark">vienoje platformoje</span></h2>
+				<p class="muted" style="font-size:18px;line-height:1.55;max-width:32em">Jokių Excel lentelių ir el. laiškų grandinių. Paruoškite pasiūlymą – darbuotojai jį gaus programėlėje.</p>
+				<a class="btn btn-dark" href="mailto:info@coverall.com" style="margin-top:12px">Aptarkime jūsų įmonės poreikius</a>
+			</div>
+			<div class="plwrap" style="position:relative;height:620px;overflow:hidden">
+				<div class="fade" style="position:absolute;inset:0">
+					<div style="position:absolute;left:50%;top:2px;width:min(940px,92%);transform:translateX(-52%);background:#FFFFFF;border-radius:16px 16px 0 0;overflow:hidden;box-shadow:0 50px 90px -40px rgba(0,59,65,.45),0 0 0 1px #E1E1E1">
+						<div style="height:38px;background:#F9F9F9;display:flex;align-items:center;gap:7px;padding:0 16px;border-bottom:1px solid #E1E1E1"><span style="width:10px;height:10px;border-radius:50%;background:#D5D8D9"></span><span style="width:10px;height:10px;border-radius:50%;background:#D5D8D9"></span><span style="width:10px;height:10px;border-radius:50%;background:#D5D8D9"></span></div>
+						<div style="position:relative"><img src="images/platform.png" alt="Coverall valdymo platforma" style="display:block;width:100%;height:auto"><img aria-hidden="true" src="images/platform.png" alt="" style="position:absolute;left:0;top:0;width:100%;height:100%;filter:blur(3px);transform:scale(1.01);-webkit-mask-image:linear-gradient(transparent 13%,#000 32%);mask-image:linear-gradient(transparent 13%,#000 32%)"><img aria-hidden="true" src="images/platform.png" alt="" style="position:absolute;left:0;top:0;width:100%;height:100%;filter:blur(6px);transform:scale(1.02);-webkit-mask-image:linear-gradient(transparent 22%,#000 50%);mask-image:linear-gradient(transparent 22%,#000 50%)"><img aria-hidden="true" src="images/platform.png" alt="" style="position:absolute;left:0;top:0;width:100%;height:100%;filter:blur(11px);transform:scale(1.03);-webkit-mask-image:linear-gradient(transparent 38%,#000 70%);mask-image:linear-gradient(transparent 38%,#000 70%)"></div>
+					</div>
+					<div style="position:absolute;left:50%;top:150px;width:min(210px,24%);margin-left:min(350px,26%)"><div class="iph" style=""><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="r1"></i><div class="iph-s"><img src="images/offer.png" alt="Darbuotojas programėlėje gauna darbdavio paruoštą pasiūlymą"></div></div></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SAUGUMAS + CTA + FOOTER -->
+	<section id="saugumas" class="dk" style="background:#003B41;scroll-margin-top:72px;position:relative;overflow:hidden">
+		<div class="wrap sg-w" style="padding-top:var(--s);padding-bottom:var(--s);display:flex;flex-direction:column;gap:var(--g)">
+			<div class="ctr" style="display:flex;flex-direction:column;gap:20px">
+				<p class="eyebrow">Saugumas</p>
+				<h2 class="h2" style="max-width:12em">Jūsų duomenys – <span class="mark">jūsų kontrolėje</span></h2>
+			</div>
+			<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;max-width:760px;width:100%;margin:0 auto">
+				<div class="sg-c" style="background:rgba(255,255,255,.05);border-radius:24px;padding:28px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)"><div style="display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><h3 style="font-size:20px;letter-spacing:-0.015em;line-height:1.25">Saugus prisijungimas</h3><p class="muted" style="font-size:16px;line-height:1.55;margin-top:8px">Smart-ID, Mobile-ID arba per jūsų banką – be papildomų slaptažodžių.</p></div></div></div>
+				<div class="sg-c" style="background:rgba(255,255,255,.05);border-radius:24px;padding:28px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)"><div style="display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><div><h3 style="font-size:20px;letter-spacing:-0.015em;line-height:1.25">Aiškūs sutikimai</h3><p class="muted" style="font-size:16px;line-height:1.55;margin-top:8px">Prieš sutikdami matote, kam naudojami jūsų duomenys (BDAR&nbsp;13&nbsp;str.).</p></div></div></div>
+			</div>
+		</div>
+		<div class="rule" style="position:relative;overflow:hidden">
+			<svg viewBox="0 0 255 128" preserveAspectRatio="xMidYMax meet" style="position:absolute;max-width:none;opacity:0.1;left:50%;transform:translateX(-50%);bottom:0;width:min(900px,120%)" aria-hidden="true"><path d="M127.5 0C197.916 0 255 57.0837 255 127.5H180C180 98.5051 156.495 75 127.5 75C98.5051 75 75 98.5051 75 127.5H0C0 57.0837 57.0837 0 127.5 0Z" fill="#68F1AD"/></svg>
+			<div class="wrap" style="position:relative;padding-top:var(--s);padding-bottom:var(--s);display:flex;flex-direction:column;align-items:center;text-align:center;gap:32px">
+				<h2 class="h2" style="color:#FFFFFF;max-width:10em">Pradėkite <span style="color:#68F1AD">jau šiandien</span></h2>
+				<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+					<a class="btn btn-light" href="#top">Gauti programėlę</a>
+					<a class="btn btn-wline" href="mailto:info@coverall.com">Susisiekti įmonėms</a>
+				</div>
+			</div>
+		</div>
+		<footer class="rule">
+			<div class="wrap ft" style="padding-top:32px;padding-bottom:32px;display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center;font-size:14px">
+				<span aria-label="Coverall"><svg viewBox="0 0 200 31" width="110" height="17.1" fill="none" role="img" aria-label="Coverall" style="display:block"><path d="M30.6581 0C47.5901 2.01912e-07 61.3162 13.7261 61.3162 30.6581H40.4129C40.4129 25.2706 36.0456 20.9032 30.6581 20.9032C25.2706 20.9032 20.9032 25.2706 20.9032 30.6581H0C2.01912e-07 13.7261 13.7261 -4.30297e-09 30.6581 0Z" fill="#67F0AC"/><path d="M81.9475 30.6558C80.108 30.6558 78.41 30.3374 76.8536 29.7007C75.2971 29.0404 73.941 28.1206 72.7855 26.9415C71.6535 25.7623 70.7691 24.3709 70.1324 22.7672C69.4956 21.14 69.1772 19.3713 69.1772 17.461C69.1772 15.5508 69.4838 13.8057 70.097 12.2256C70.7337 10.6455 71.6181 9.27769 72.7501 8.12211C73.9057 6.94295 75.2617 6.04679 76.8182 5.43363C78.3747 4.79689 80.0845 4.47852 81.9475 4.47852C84.0464 4.47852 85.9331 4.89122 87.6075 5.71663C89.3055 6.51846 90.6851 7.66224 91.7463 9.14798C92.8311 10.6101 93.4915 12.3317 93.7273 14.3127H88.4211C88.1145 12.4968 87.3716 11.129 86.1925 10.2092C85.0133 9.26589 83.6101 8.79423 81.9829 8.79423C80.5443 8.79423 79.2708 9.13619 78.1624 9.8201C77.0776 10.504 76.2286 11.4945 75.6154 12.7916C75.0023 14.0651 74.6957 15.6098 74.6957 17.4257C74.6957 19.2652 75.0023 20.857 75.6154 22.2013C76.2522 23.5219 77.1248 24.5478 78.2332 25.2789C79.3416 25.9863 80.6151 26.3401 82.0536 26.3401C83.5866 26.3401 84.9426 25.8802 86.1217 24.9605C87.3009 24.0407 88.0673 22.6729 88.4211 20.857H93.7981C93.4915 22.838 92.7958 24.5714 91.7109 26.0571C90.6261 27.5193 89.2465 28.6512 87.5721 29.4531C85.8977 30.2549 84.0228 30.6558 81.9475 30.6558Z" fill="#FFFFFF"/><path d="M104.554 30.6558C102.573 30.6558 100.827 30.2667 99.3182 29.4884C97.8324 28.6866 96.6651 27.5782 95.8161 26.1632C94.9907 24.7246 94.578 23.0738 94.578 21.2108C94.578 19.3477 94.9907 17.7205 95.8161 16.329C96.6651 14.9376 97.8324 13.8528 99.3182 13.0746C100.827 12.2963 102.573 11.9072 104.554 11.9072C106.558 11.9072 108.303 12.2963 109.789 13.0746C111.298 13.8528 112.466 14.9376 113.291 16.329C114.117 17.7205 114.529 19.3477 114.529 21.2108C114.529 23.0738 114.105 24.7246 113.256 26.1632C112.43 27.5782 111.263 28.6866 109.754 29.4884C108.268 30.2667 106.535 30.6558 104.554 30.6558ZM104.554 26.4816C105.379 26.4816 106.122 26.2693 106.782 25.8448C107.466 25.4204 108.009 24.819 108.409 24.0407C108.81 23.2389 109.011 22.2838 109.011 21.1754C109.011 19.5481 108.575 18.2982 107.702 17.4257C106.853 16.5295 105.804 16.0814 104.554 16.0814C103.304 16.0814 102.242 16.5295 101.37 17.4257C100.521 18.3218 100.096 19.5717 100.096 21.1754C100.096 22.2838 100.297 23.2389 100.698 24.0407C101.099 24.819 101.629 25.4204 102.29 25.8448C102.974 26.2693 103.728 26.4816 104.554 26.4816Z" fill="#FFFFFF"/><path d="M120.999 30.3021L113.889 12.261H119.584L125.138 29.0993H122.166L127.685 12.261H133.239L126.128 30.3021H120.999Z" fill="#FFFFFF"/><path d="M142.519 30.6558C140.514 30.6558 138.769 30.2667 137.284 29.4884C135.798 28.6866 134.642 27.5782 133.817 26.1632C133.015 24.7482 132.614 23.121 132.614 21.2815C132.614 19.4184 133.015 17.7912 133.817 16.3998C134.642 14.9848 135.786 13.8882 137.248 13.1099C138.71 12.3081 140.408 11.9072 142.342 11.9072C144.205 11.9072 145.821 12.2845 147.188 13.0392C148.556 13.7939 149.618 14.8433 150.372 16.1875C151.127 17.5318 151.504 19.1119 151.504 20.9278C151.504 21.3051 151.492 21.6588 151.469 21.989C151.445 22.2956 151.41 22.5904 151.363 22.8734H135.727V19.3713H147.082L146.163 20.008C146.163 18.5459 145.809 17.4728 145.101 16.7889C144.417 16.0814 143.474 15.7277 142.271 15.7277C140.88 15.7277 139.795 16.1993 139.017 17.1427C138.262 18.086 137.885 19.501 137.885 21.3876C137.885 23.2271 138.262 24.5949 139.017 25.4911C139.795 26.3873 140.951 26.8353 142.484 26.8353C143.333 26.8353 144.064 26.6938 144.677 26.4108C145.29 26.1278 145.75 25.668 146.056 25.0312H151.044C150.455 26.7764 149.441 28.156 148.002 29.1701C146.587 30.1606 144.759 30.6558 142.519 30.6558Z" fill="#FFFFFF"/><path d="M153.634 30.3021V12.261H158.834V16.5059H158.941V30.3021H153.634ZM158.941 20.8924L158.481 16.612C158.905 15.0791 159.601 13.9118 160.568 13.1099C161.535 12.3081 162.737 11.9072 164.176 11.9072C164.624 11.9072 164.954 11.9544 165.167 12.0487V17.0012C165.049 16.954 164.884 16.9304 164.671 16.9304C164.459 16.9068 164.2 16.895 163.893 16.895C162.195 16.895 160.945 17.2016 160.143 17.8148C159.342 18.4044 158.941 19.4302 158.941 20.8924Z" fill="#FFFFFF"/><path d="M177.72 30.3021C177.579 29.7832 177.473 29.229 177.402 28.6395C177.355 28.0499 177.331 27.366 177.331 26.5877H177.19V18.0624C177.19 17.3313 176.942 16.7653 176.447 16.3644C175.975 15.9399 175.268 15.7277 174.324 15.7277C173.428 15.7277 172.709 15.881 172.167 16.1875C171.648 16.4941 171.306 16.9422 171.141 17.5318H166.082C166.318 15.9046 167.155 14.5603 168.594 13.4991C170.032 12.4378 172.002 11.9072 174.501 11.9072C177.095 11.9072 179.076 12.485 180.444 13.6406C181.812 14.7961 182.496 16.4588 182.496 18.6284V26.5877C182.496 27.1773 182.531 27.7787 182.602 28.3918C182.696 28.9814 182.838 29.6182 183.027 30.3021H177.72ZM171.424 30.6558C169.631 30.6558 168.205 30.2077 167.143 29.3116C166.082 28.3918 165.552 27.1773 165.552 25.668C165.552 23.9936 166.176 22.6493 167.426 21.6353C168.7 20.5976 170.469 19.9255 172.733 19.6189L178.003 18.876V21.9536L173.617 22.6257C172.674 22.7672 171.978 23.0267 171.53 23.404C171.082 23.7813 170.858 24.3002 170.858 24.9605C170.858 25.5501 171.07 25.9981 171.494 26.3047C171.919 26.6113 172.485 26.7646 173.192 26.7646C174.301 26.7646 175.244 26.4698 176.022 25.8802C176.801 25.2671 177.19 24.5596 177.19 23.7577L177.685 26.5877C177.166 27.932 176.376 28.946 175.315 29.6299C174.254 30.3139 172.957 30.6558 171.424 30.6558Z" fill="#FFFFFF"/><path d="M185.867 30.3021V4.83226H191.173V30.3021H185.867Z" fill="#FFFFFF"/><path d="M194.694 30.3021V4.83226H200V30.3021H194.694Z" fill="#FFFFFF"/></svg></span>
+				<span class="muted">UAB „Coverall“, Vilnius<span class="sep">&nbsp; ·&nbsp; </span><a class="fm" href="mailto:info@coverall.com" style="text-decoration:none">info@coverall.com</a></span>
+				<span style="display:flex;gap:28px" class="muted"><a href="#top" style="text-decoration:none">Naudojimo sąlygos</a><a href="#top" style="text-decoration:none">Privatumo politika</a></span>
+			</div>
+		</footer>
+	</section>
+
+</div>
+
+</body>
+</html>
